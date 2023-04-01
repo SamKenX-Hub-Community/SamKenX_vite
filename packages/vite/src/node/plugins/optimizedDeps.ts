@@ -1,4 +1,4 @@
-import { promises as fs } from 'node:fs'
+import fsp from 'node:fs/promises'
 import colors from 'picocolors'
 import type { ResolvedConfig } from '..'
 import type { Plugin } from '../plugin'
@@ -67,7 +67,7 @@ export function optimizedDepsPlugin(config: ResolvedConfig): Plugin {
         // load hooks to avoid race conditions, once processing is resolved,
         // we are sure that the file has been properly save to disk
         try {
-          return await fs.readFile(file, 'utf-8')
+          return await fsp.readFile(file, 'utf-8')
         } catch (e) {
           // Outdated non-entry points (CHUNK), loaded after a rerun
           throwOutdatedRequest(id)
@@ -127,8 +127,7 @@ export function optimizedDepsBuildPlugin(config: ResolvedConfig): Plugin {
       // Load the file from the cache instead of waiting for other plugin
       // load hooks to avoid race conditions, once processing is resolved,
       // we are sure that the file has been properly save to disk
-
-      return await fs.readFile(file, 'utf-8')
+      return fsp.readFile(file, 'utf-8')
     },
   }
 }
