@@ -9,12 +9,12 @@ patchedDependencies:
   chokidar@3.5.3:
     hash: dzxbf3kgof5pdmbsyih2x43sq4
     path: patches/chokidar@3.5.3.patch
-  sirv@2.0.2:
-    hash: hmoqtj4vy3i7wnpchga2a2mu3y
-    path: patches/sirv@2.0.2.patch
   dotenv-expand@9.0.0:
     hash: dccccn23nvejzy75sgiosdt2au
     path: patches/dotenv-expand@9.0.0.patch
+  sirv@2.0.2:
+    hash: hmoqtj4vy3i7wnpchga2a2mu3y
+    path: patches/sirv@2.0.2.patch
 
 importers:
 
@@ -64,7 +64,7 @@ importers:
       resolve: ^1.22.1
       rimraf: ^4.4.0
       rollup: ^3.20.0
-      semver: ^7.3.8
+      semver: ^7.5.2
       simple-git-hooks: ^2.8.1
       tslib: ^2.5.0
       tsx: ^3.12.6
@@ -119,7 +119,7 @@ importers:
       resolve: 1.22.1
       rimraf: 4.4.0
       rollup: 3.20.0
-      semver: 7.3.8
+      semver: 7.5.2
       simple-git-hooks: 2.8.1
       tslib: 2.5.0
       tsx: 3.12.6
@@ -3583,7 +3583,7 @@ packages:
       grapheme-splitter: 1.0.4
       ignore: 5.2.0
       natural-compare-lite: 1.4.0
-      semver: 7.3.8
+      semver: 7.5.2
       tsutils: 3.21.0_typescript@5.0.2
       typescript: 5.0.2
     transitivePeerDependencies:
@@ -3657,7 +3657,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.3.8
+      semver: 7.5.2
       tsutils: 3.21.0_typescript@5.0.2
       typescript: 5.0.2
     transitivePeerDependencies:
@@ -3678,7 +3678,7 @@ packages:
       '@typescript-eslint/typescript-estree': 5.56.0_typescript@5.0.2
       eslint: 8.36.0
       eslint-scope: 5.1.1
-      semver: 7.3.8
+      semver: 7.5.2
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -7493,7 +7493,7 @@ packages:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.11.0
-      semver: 7.3.8
+      semver: 7.5.2
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -8680,6 +8680,14 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
+
+  /semver/7.5.2:
+    resolution: {integrity: sha512-SoftuTROv/cRjCze/scjGyiDtcUyxw1rgYQSZY7XTmtR5hX+dm76iDbTH8TkLPHCQmlbQVSSbNZCPM2hb0knnQ==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      lru-cache: 6.0.0
+    dev: true
 
   /send/0.18.0:
     resolution: {integrity: sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==}
